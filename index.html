@@ -1,0 +1,17 @@
+<body>
+<script>
+const content = document.getElementById("b").val;
+function changeA() {
+  try {
+    fs.writeFileSync('./a.txt', content);
+  } catch (err) {
+    console.error(err);
+  }
+}
+</script>
+<form id="a" name="a" method="POST" onSubmit="changeA()">
+  <input type="text" id="b" placeholder="a"/>
+  <input type="submit"/>
+</form>
+</body>
+    
