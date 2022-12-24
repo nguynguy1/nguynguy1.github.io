@@ -1,9 +1,9 @@
 <body>
 <script>
 const content = "abc";
-function changeA() {
+async function changeA() {
   try {
-    fs.writeFileSync('./a.txt', content);
+    await fs.writeFile('./a.txt', content);
   } catch (err) {
     console.error(err);
   }
